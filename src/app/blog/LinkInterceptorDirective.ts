@@ -21,6 +21,8 @@ export class LinkInterceptorDirective {
                 e.preventDefault();
                 e.stopPropagation();
                 this.router.navigate(['/blog'], { queryParams: { redirect: routerlink } });
+                window.scrollTo(0, 0);
+                
                 // this.router.navigate(['/home']);
             }
         }
