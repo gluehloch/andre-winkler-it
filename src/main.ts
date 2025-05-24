@@ -60,7 +60,7 @@ bootstrapApplication(AppComponent, {
             },
             {
                 matcher: (url) => {
-                    if (url.length === 1 && url[0].path.match(/^@redirect=.+$/gm)) {
+                    if (url.length === 1 && url[0].path.match(/^@redirect=.+$/m)) {
                         return {consumed: url, posParams: {redirect: new UrlSegment(url[0].path.slice(1), {})}};
                     }
                     return null;

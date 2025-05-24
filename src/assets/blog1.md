@@ -3,7 +3,7 @@
     git log --tags --simplify-by-decoration --pretty="format:%ai %d"
     ```
 
-## TODO: Kopiert aus ZSH GIT-Plugn.
+## TODO: Kopiert aus ZSH GIT-Plugin.
 ```
 gst='git status'
 ```
