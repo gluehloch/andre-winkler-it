@@ -21,4 +21,4 @@ async function copy() {
     }
 }
 
-copy();
+await copy();
