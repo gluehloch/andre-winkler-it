@@ -1,4 +1,5 @@
-var propertiesReader = require('properties-reader');
+import propertiesReader from 'properties-reader';
+
 var properties = propertiesReader('./build.properties');
 
 const target = properties.get('var.www.andre-winkler');
