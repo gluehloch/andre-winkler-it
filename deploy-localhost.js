@@ -14,7 +14,7 @@ async function copy() {
         // console.log('sourceFile.txt was copied to destinationFile.txt');
 
         // Copy a directory recursively
-        await cp('./dist/angularapp', 'target', { recursive: true });
+        await fs.cp('./dist/angularapp', 'target', { recursive: true });
         console.log('sourceDir was copied to destinationDir');
     } catch (err) {
         console.error('Error:', err.message);
