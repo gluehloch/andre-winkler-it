@@ -1,12 +1,11 @@
 import propertiesReader from 'properties-reader';
+import * as fs from 'fs';
 
 var properties = propertiesReader('./build.properties');
 
 const target = properties.get('var.www.andre-winkler');
 
-console.info(__dirname, target);
-
-const { cp } = require('fs').promises;
+console.info("target=", target);
 
 async function copy() {
     try {
