@@ -1,3 +1,4 @@
+/* Das ist ein Test. */
 var FtpDeploy = require('ftp-deploy');
 var propertiesReader = require('properties-reader');
 
