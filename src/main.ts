@@ -1,7 +1,11 @@
 import './polyfills';
 
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { enableProdMode, importProvidersFrom } from '@angular/core';
+import { enableProdMode, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+
 import { environment } from './environments/environment';
 
 import { AppComponent } from './app/app.component';
@@ -10,10 +14,6 @@ import { ZitateComponent } from './app/zitate/zitate.component';
 import { DownloadComponent } from './app/download/download.component';
 import { ProjekteComponent } from './app/projekte/projekte.component';
 import { HomeComponent } from './app/home/home.component';
-import { provideRouter } from '@angular/router';
-import { withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { CookieConsentSubmit } from './app/app.cookieconsentsubmit.service';
 
 if (environment.production) {
@@ -22,6 +22,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
     providers: [
+        provideZoneChangeDetection(),
         importProvidersFrom(BrowserModule, FormsModule),
         CookieConsentSubmit,
         provideHttpClient(withInterceptorsFromDi()),

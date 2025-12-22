@@ -7,26 +7,24 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "./",
-    "downlevelIteration": true,
+    "esModuleInterop": true,
     "importHelpers": true,
     "module": "esnext",
     "outDir": "./dist/out-tsc",
     "strictNullChecks": true,
     "sourceMap": true,
     "declaration": false,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],
-    "lib": [
-      "es2015",
-      "dom"
-    ],
     "paths": {
-      "tslib" : ["path/to/node_modules/tslib/tslib.d.ts"]
-    },    
+      "tslib": [
+        "path/to/node_modules/tslib/tslib.d.ts"
+      ]
+    }
   }
 }
